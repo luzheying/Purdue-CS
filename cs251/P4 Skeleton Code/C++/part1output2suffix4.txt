@@ -1,2 +1,0 @@
-s -> [bursaries, electrics, leans, metrics, thespians]
-y -> [ability, fatality, friendly, lucky, murky, prodigality, rapidly, unpredictability]
