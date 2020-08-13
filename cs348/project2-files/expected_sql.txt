@@ -1,0 +1,7 @@
+Professor_Name	TA_NAME	TA_POSITION	HEAD
+Jacob	Timothy	UTA	NO
+Professor_Name	TA_NAME	TA_POSITION	HEAD
+Jacob	David	GTA	NO
+ProfessorID	Name	Position
+1005	Alex	Professor of Practice 
+1007	Jacob	Associate Professor

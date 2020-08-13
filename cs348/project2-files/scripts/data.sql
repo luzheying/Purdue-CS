@@ -1,0 +1,60 @@
+use loginid;
+#Professor
+INSERT INTO Professor VALUES(1001,'Robert','Assistant Professor');
+INSERT INTO Professor VALUES(1002,'Brown','Associate Professor');
+INSERT INTO Professor VALUES(1003,'John','Associate Professor');
+INSERT INTO Professor VALUES(1004,'Chris','Professor');
+INSERT INTO Professor VALUES(1005,'Alex','Professor of Practice ');
+INSERT INTO Professor VALUES(1006,'Jason','Assistant Professor');
+INSERT INTO Professor VALUES(1007,'Jacob','Associate Professor');
+INSERT INTO Professor VALUES(1008,'Jimmy','Professor');
+INSERT INTO Professor VALUES(1009,'Susan','Assistant Professor');
+
+#Department
+INSERT INTO Department VALUES(1,'Computer Science',1001);
+INSERT INTO Department VALUES(2,'Mechanical Engineering',1004);
+INSERT INTO Department VALUES(3,'ECE',1002);
+INSERT INTO Department VALUES(4,'Industrial Engineering',1006);
+INSERT INTO Department VALUES(5,'Civil Engineering',1009);
+
+#Student
+INSERT INTO Student VALUES(784562198,'Dwayne','1001 Trent St','895-458-7844');
+INSERT INTO Student VALUES(451976325,'Smith','977 Washington St','548-461-1816');
+INSERT INTO Student VALUES(489315678,'Sam','102 Tellow St','864-846-4531');
+INSERT INTO Student VALUES(289784621,'Shawn','7660 Tetlow St','846-845-1658');
+INSERT INTO Student VALUES(946752553,'Rebecca','5501 Yeager St','843-168-7844');
+INSERT INTO Student VALUES(845693217,'Skylar','2550 Holbrook Dr','915-845-1513');
+
+#TA
+INSERT INTO TA VALUES(101,'David','GTA',831831815,1);
+INSERT INTO TA VALUES(102,'Jennifer','UTA',218644674,5);
+INSERT INTO TA VALUES(103,'Justin','UTA',984321845,4);
+INSERT INTO TA VALUES(104,'Hannah','GTA',782965421,3);
+INSERT INTO TA VALUES(105,'Timothy','UTA',865381381,1);
+INSERT INTO TA VALUES(106,'Matt','GTA',654223181,1);
+INSERT INTO TA VALUES(107,'Bob','UTA',867519472,2);
+
+
+#Professor_Affiliation
+INSERT INTO Professor_Affiliation VALUES(1001,1,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1002,3,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1003,1,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1004,2,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1005,1,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1006,4,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1007,1,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1008,4,TRUE);
+INSERT INTO Professor_Affiliation VALUES(1007,2,FALSE);
+INSERT INTO Professor_Affiliation VALUES(1009,5,TRUE);
+#Lecture
+INSERT INTO Lecture VALUES(1,845693217,101,1001,'MWF','14:30:00','15:30:00');
+INSERT INTO Lecture VALUES(2,784562198,106,1005,'MWF','13:00:00','15:30:00');
+INSERT INTO Lecture VALUES(3,289784621,104,1002,'TR','12:30:00','14:00:00');
+INSERT INTO Lecture VALUES(4,289784621,105,1007,'TR','14:30:00','16:00:00');
+INSERT INTO Lecture VALUES(5,946752553,103,1006,'MWF','10:30:00','11:30:00');
+INSERT INTO Lecture VALUES(6,451976325,101,1007,'MWF','11:30:00','12:30:00');
+INSERT INTO Lecture VALUES(7,489315678,107,1004,'MWF','15:30:00','16:30:00');
+INSERT INTO Lecture VALUES(8,489315678,106,1003,'TR','10:30:00','12:30:00');
+INSERT INTO Lecture VALUES(9,289784621,102,1009,'MWF','16:30:00','17:30:00');
+INSERT INTO Lecture VALUES(10,489315678,103,1008,'TR','10:30:00','12:00:00');
+

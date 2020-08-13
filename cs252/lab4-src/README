@@ -1,0 +1,20 @@
+Part 2
+Output of Step 3:
+    Threads created in the while loop print out characters "A","B" and "C" without order.
+Output of Step 5:
+    It prints character "C" continuously. It is printing "C" only because the main thread never reaches the threads. Instead it entered a while loop to print "C".
+
+Part 4
+
+						                    System  (Kernel) Time 	User Time		Real Time
+pthread_mutex (count)				        	0m1.065s	    	0m2.418s		0m1.824s
+spin lock (count_spin with thr_yield)			0m0.113s	    	0m0.442s		0m0.279s
+spin_lock (count_spin without thr_yield) 		0m0.000s	    	0m7.528s		0m3.776s
+
+1. According to the lecture power point "The overhead in spinlocks decreases by calling pthread_yield to give up the CPU." So with pthread_yield, it will help decrease the overall time. Without pthread_yield, the CPU will just wait which takes more time.
+2.With mutex lock, it runs in user space and provides each thread with a mutually exclusive lock on the excution part. So it spent more time in kernal than spin_lock.
+
+Part 6
+1. 239 190 173 222
+2.  ./buffer `printf "abcdefghijklmno\xef\xbe\xad\xde"`
+3. Since the size of char is 15, any string larger than 15 will crash the program with buffer overflow problem. And when set_me == "deadbeef", the program is going to call shell. By passing with a buffer overflow attack '\xef\xbe\xad\xde' which is "deadbeef" in little endian order, the character over the size it can fit will go to the memory of set_me. In that way if will protect buffer overflow.
